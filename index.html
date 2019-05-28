@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MEDICAL NOTES</title>
+    <link rel="stylesheet" href="./dist/css/reset.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://img.icons8.com/ultraviolet/40/000000/health-book.png" type="image/png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+</head>
+<body>
+<!----- S E C T I O N     M A I N------->
+<header class="header">
+    <a href="#" class="logo">
+        <img src="./dist/img/logo.png" alt="">
+    </a>
+    <button class="header-btn">Make an appointment</button>
+</header>
+
+
+<main class="main">
+    <div id="desk">
+        <p class="text">No items have been added</p>
+
+</main>
+
+<!----- S E C T I O N     M O D A L  ------->
+<div class='overlay overlay-hidden'>
+    <div class="modal">
+        <header class="modal-header">
+            <button class="select" id="select-input" data-Doc="">Choose a doctor</button>
+            <i class="fas fa-times cross"></i>
+        </header>
+        <ul class="select-wrapper">
+            <li class="select-item doctor" id="cardiologist">Cardiologist</li>
+            <li class="select-item doctor" id="therapist">Therapist</li>
+            <li class="select-item doctor" id="dentist">Dentist</li>
+        </ul>
+        <form class="form-hidden modal-form" id="cardiologist-form">
+            <p class="info-input-descript">Enter your name</p>
+            <input type="text" name="name" class="info-input" placeholder="Name" required>
+            <p class="info-input-descript">Enter visit date</p>
+            <input type="date" name="date" class="info-input visit-date" placeholder="Visit date" required>
+            <p class="info-input-descript">Enter visit purpose</p>
+            <input type="text" name="visit-reason" class="info-input" placeholder="Visit purpose" required>
+            <p class="info-input-descript">Enter your age</p>
+            <input type="text" name="age" class="info-input" placeholder="Age" required>
+            <p class="info-input-descript">Enter your arterial pressure</p>
+            <input type="text" name="pressure" class="info-input" placeholder="Enter your arterial pressure" required>
+            <p class="info-input-descript">Enter your body mass index</p>
+            <input type="text" name="index-mass" class="info-input" placeholder="Body mass index" required>
+            <p class="info-input-descript">Enter yout recent cardiovascular diseases (not required)</p>
+            <input type="text" name="cardio-disease" class="info-input" placeholder="Cardiovascular diseases">
+            <p class="info-input-descript">Enter your comments</p>
+            <textarea name="comment" maxlength="400" placeholder="Comments" class="info-input-comment"></textarea>
+            <input type="submit" value="Create" class="submit-btn">
+        </form>
+        <form class="form-hidden modal-form" id="therapist-form">
+            <p class="info-input-descript">Enter your name</p>
+            <input type="text" name="name" class="info-input" placeholder="Name" required>
+            <p class="info-input-descript">Enter visit date</p>
+            <input type="date" name="date" class="info-input visit-date" placeholder="Visit date" required>
+            <p class="info-input-descript">Enter visit purpose</p>
+            <input type="text" name="visit-reason" class="info-input" placeholder="Visit purpose" required>
+            <p class="info-input-descript">Enter your age</p>
+            <input type="text" name="age" class="info-input" placeholder="Age" required>
+            <p class="info-input-descript">Enter your comments</p>
+            <textarea name="comment" maxlength="400" placeholder="Comments" class="info-input-comment"></textarea>
+            <input type="submit" value="Create" class="submit-btn">
+        </form>
+        <form class="form-hidden modal-form" id="dentist-form">
+            <p class="info-input-descript">Enter your name</p>
+            <input type="text" name="name" class="info-input" placeholder="Name" required>
+            <p class="info-input-descript">Enter visit date</p>
+            <input type="date" name="date" class="info-input visit-date" placeholder="Visit date" required>
+            <p class="info-input-descript">Enter visit purpose</p>
+            <input type="text" name="visit-reason" class="info-input" placeholder="Visit purpose" required>
+            <p class="info-input-descript">Enter date of the recent visit</p>
+            <input type="date" name="prev-visit" class="info-input prev-visit-date" placeholder="Recent visit">
+            <p class="info-input-descript">Enter your comments</p>
+            <textarea name="comment" maxlength="400" placeholder="Comments" class="info-input-comment"></textarea>
+            <input type="submit" value="Create" class="submit-btn">
+        </form>
+    </div>
+</div>
+
+</body>
+<script src="./dist/js/all.js"></script>
+</html>
