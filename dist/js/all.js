@@ -2,6 +2,8 @@ const doc = document;
 
 const desk = doc.getElementById('desk');
 
+
+
 updateDatePickers();
 
 getCardsFromLocalStorage();
@@ -153,7 +155,7 @@ function getCardsFromLocalStorage() {
 }
 
 function closeCard(card) {
-    let parent = card.parentNode;
+    let parent = card.closest('.card');
     let currentID = parent.getAttribute('data-id');
     window.localStorage.removeItem(currentID);
     desk.removeChild(parent);
@@ -281,9 +283,19 @@ function makeDragonDrop(cardTarget) {
         document.addEventListener('mousemove', move);
     });
 
-    document.addEventListener('mouseup', e => {
+    doc.addEventListener('mouseup', e => {
+        let card = e.target.closest('.card');
+        if(card){
+            let id = card.getAttribute('data-ID');
+            localStorage.removeItem(id);
+            localStorage.setItem(id,card.outerHTML);
 
-        document.removeEventListener('mousemove', move);
+            console.log(id);
+
+            doc.removeEventListener('mousemove', move);
+        }
+
+        return false;
     });
 }
 
